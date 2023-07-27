@@ -49,11 +49,11 @@ my_spark = SparkSession\
 
 # load mongo data
 df_followers = my_spark.read.format('com.mongodb.spark.sql.DefaultSource')\
-    .option("uri", f"mongodb://127.0.0.1/twitter_followers.{COLLECTION}")\
+    .option("uri", f"mongodb+srv://sparkydz:sparkydz@cluster0.vpich6m.mongodb.net/yassir_demo.{COLLECTION}")\
     .load()
 
 df_friends = my_spark.read.format('com.mongodb.spark.sql.DefaultSource')\
-    .option("uri", f"mongodb://127.0.0.1/twitter_friends.{COLLECTION}")\
+    .option("uri", f"mongodb+srv://sparkydz:sparkydz@cluster0.vpich6m.mongodb.net/yassir_demo.{COLLECTION}")\
     .load()
 
 # select columns (key names) from dataframe

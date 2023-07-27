@@ -50,17 +50,17 @@ my_spark = SparkSession\
     .getOrCreate()
 
 # json
-file = f'/home/piuser/Desktop/tutorial/spark/data/twitter_followers/{COLLECTION}.json'
+file = f'/home/ubuntu/Desktop/apache-spark/data/twitter_followers/{COLLECTION}.json'
 df_followers = my_spark.read.json(file)
 
-file = f'/home/piuser/Desktop/tutorial/spark/data/twitter_friends/{COLLECTION}.json'
+file = f'/home/ubuntu/Desktop/apache-spark/data/twitter_followers/{COLLECTION}.json'
 df_friends = my_spark.read.json(file)
 
-#print(Fore.WHITE + Back.RED + f"followers count: {df_followers.count()}", Fore.WHITE + Back.GREEN + f"followers: {df_followers.first()}")
-#print(Fore.WHITE + Back.RED + f"friends count: {df_friends.count()}", Fore.WHITE + Back.CYAN + f"friends: {df_friends.first()}")
+print(Fore.WHITE + Back.RED + f"followers count: {df_followers.count()}", Fore.WHITE + Back.GREEN + f"followers: {df_followers.first()}")
+print(Fore.WHITE + Back.RED + f"friends count: {df_friends.count()}", Fore.WHITE + Back.CYAN + f"friends: {df_friends.first()}")
 
 # csv
-file = "/home/piuser/Desktop/tutorial/spark/data/netflix_titles.csv"
+file = "/home/ubuntu/Desktop/apache-spark/data/netflix_titles.csv"
 df_netflix = my_spark.read.format("csv") \
     .option("inferschema", True) \
     .option("header", True) \

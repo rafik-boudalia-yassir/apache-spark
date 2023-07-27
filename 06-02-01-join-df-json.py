@@ -47,10 +47,10 @@ my_spark = SparkSession\
     .getOrCreate()
 
 # get data from JSON files
-file = f'/home/piuser/Desktop/tutorial/spark/data/twitter_followers/{COLLECTION}.json'
+file = f'/home/ubuntu/Desktop/apache-spark/data/twitter_followers/{COLLECTION}.json'
 df_followers = my_spark.read.json(file)
 
-file = f'/home/piuser/Desktop/tutorial/spark/data/twitter_friends/{COLLECTION}.json'
+file = f'/home/ubuntu/Desktop/apache-spark/data/twitter_friends/{COLLECTION}.json'
 df_friends = my_spark.read.json(file)
 
 # select columns (key names) from dataframe

@@ -29,8 +29,8 @@ from pyspark.sql import SparkSession
 from pyspark.sql import functions as f
 
 # load mongo data
-input_uri = "mongodb://127.0.0.1/twitter_user_timeline.guardian"
-output_uri = "mongodb://127.0.0.1/twitter_user_timeline.guardian"
+input_uri = "mongodb+srv://sparkydz:sparkydz@cluster0.vpich6m.mongodb.net/yassir_demo.twitter_demo"
+output_uri = "mongodb+srv://sparkydz:sparkydz@cluster0.vpich6m.mongodb.net/yassir_demo.twitter_demo"
 
 my_spark = SparkSession\
     .builder\
